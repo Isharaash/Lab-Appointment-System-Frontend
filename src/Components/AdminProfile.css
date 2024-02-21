@@ -1,0 +1,24 @@
+.admin-profile {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-left: 210px;
+    margin-top: 90px;
+  }
+  
+  .admin-profile h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .admin-profile p {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  

@@ -1,0 +1,23 @@
+.Home {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .Home h1 {
+    font-size: 2.5rem;
+    color: #333;
+
+    
+  }
+  
+  .Home p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px;
+  }
+  /* Assuming you want to set a fixed size for the images */
+.carousel .carousel-item img {
+  width: 400px; /* Set your desired width */
+  height: 400px; /* Set your desired height */
+}
+

@@ -1,0 +1,30 @@
+.About {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('D:\Appoiment\lap\src\Image\4.png'); /* Adjust the path and filename according to your image */
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    margin-bottom: -60px;
+    
+  }
+  
+  .About h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .About p {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-top: 10px;
+    
+    font-weight: 500;
+    text-shadow: -1px -1px 0 #ebe8e8,  
+                  1px -1px 0 #ebe8e8,
+                  -1px 1px 0 #ebe8e8,
+                  1px 1px 0 #ebe8e8;
+  }
+  
+  

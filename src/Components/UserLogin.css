@@ -1,0 +1,51 @@
+/* UserLogin component styles */
+.login h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .login form {
+    max-width: 400px;
+    margin: 20px auto;
+    
+  }
+  
+  .login div {
+    margin-bottom: 15px;
+  }
+  
+  .login label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .login input[type='email'],
+   input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .login button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login button:hover {
+    background-color: #0056b3;
+  }
+  .register-link {
+    color: #007bff; /* Set the link color */
+    text-decoration: none; /* Remove the underline */
+  }
+  
+  .register-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
