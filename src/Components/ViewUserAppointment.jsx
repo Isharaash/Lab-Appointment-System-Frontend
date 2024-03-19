@@ -36,6 +36,25 @@ const ViewUserAppointments = ({ user }) => {
     }
   };
 
+  const downloadAppointmentReport = async (appointmentId) => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/user/reports/${appointmentId}/pdf`);
+      if (!response.ok) {
+        throw new Error('Failed to download appointment report');
+      }
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `appointment_${appointmentId}_report.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error('Error downloading appointment report:', error);
+    }
+  };
+
   return (
     <div className="table-container">
       <h2>My Appointments</h2>
@@ -60,6 +79,8 @@ const ViewUserAppointments = ({ user }) => {
               <td>{appointment.des}</td>
               <td>
                 <button onClick={() => deleteAppointment(appointment.id)}>Delete</button>
+                <button className="download-button" onClick={() => downloadAppointmentReport(appointment.id)}>Download Report</button>
+
               </td>
             </tr>
           ))}
@@ -70,3 +91,4 @@ const ViewUserAppointments = ({ user }) => {
 };
 
 export default ViewUserAppointments;
+

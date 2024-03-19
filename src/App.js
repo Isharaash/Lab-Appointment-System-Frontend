@@ -22,6 +22,8 @@ import HomePage from './Components/HomePage';
 import AboutPage from './Components/AboutPage';
 import ContactPage from './Components/ContactPage';
 import UserLogin from './Components/UserLogin';
+import ReportContentPage from './Components/ReportContentPage';
+import AllReportsPage from './Components/AllReportsPage';
 
 
 
@@ -49,6 +51,8 @@ function App() {
           <Route path="/userdetails" element={<UserDetails/>}></Route>
           <Route path="/technicianspage" element={<Technicianspage/>}></Route>
           <Route path="/techniciansappointment" element={<TechnicianAppointment/>}></Route>
+          <Route path="/generate-report/:appointmentId" element={<ReportContentPage/>}></Route>
+          <Route path="/allreportcode" element={<AllReportsPage/>}></Route>
        
          
         </Routes>
