@@ -4,6 +4,7 @@ import './UserLogin.css'; // Import CSS for UserLogin component
 import Footer from './Footer';
 import NavigationBar from './NavigationBar';
 import { Link } from 'react-router-dom';
+
 function UserLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -45,32 +46,32 @@ function UserLogin() {
   return (
     <div>
       <NavigationBar/>
-    <div className='login'>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit">Login</button>
-        <p>Don't have an account? <Link to="/useregisration" className="register-link">Register here</Link></p>
-      </form>
-    </div>
-    <Footer/>
+      <div className='login'>
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="submit">Login</button>
+          <p>Don't have an account? <Link to="/useregisration" className="register-link">Register here</Link></p>
+        </form>
+      </div>
+      <Footer/>
     </div>
   );
 }
 
-export default UserLogin
+export default UserLogin;

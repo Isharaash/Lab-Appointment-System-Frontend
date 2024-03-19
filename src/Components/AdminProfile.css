@@ -1,24 +1,36 @@
+/* AdminProfile.css */
+
 .admin-profile {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    width: 300px;
-    margin: 0 auto;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    margin-left: 210px;
-    margin-top: 90px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 250px;
+  margin-bottom: 280px;
+  margin-top: 100px;
+  margin-left: 400px;
+}
+
+.admin-profile h2 {
+  margin-bottom: 10px;
+}
+
+.admin-profile p {
+  margin-bottom: 5px;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .admin-profile {
+    padding: 15px;
   }
-  
+
   .admin-profile h2 {
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+    font-size: 18px;
   }
-  
+
   .admin-profile p {
-    margin-bottom: 10px;
-    color: #666;
+    font-size: 14px;
   }
-  
+}

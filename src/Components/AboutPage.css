@@ -1,30 +1,45 @@
+/* AboutPage.css */
 .About {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-image: url('D:\Appoiment\lap\src\Image\4.png'); /* Adjust the path and filename according to your image */
-    background-size: cover;
-    background-position: center;
-    height: 450px;
-    margin-bottom: -60px;
-    
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url('D:\Appoiment\lap\src\Image\4.png'); /* Adjust the path and filename according to your image */
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  margin-bottom: 235px;
+}
+
+.About h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.About p {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-top: 10px;
+  font-weight: 500;
+  text-shadow: -1px -1px 0 #ebe8e8,  
+                1px -1px 0 #ebe8e8,
+                -1px 1px 0 #ebe8e8,
+                1px 1px 0 #ebe8e8;
+}
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .About {
+    padding: 10px; /* Decrease padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    margin-bottom: 0; /* Remove negative margin */
+    background-image: none; /* Remove background image on smaller screens */
   }
-  
+
   .About h2 {
-    font-size: 2rem;
-    color: #333;
+    font-size: 1.5rem; /* Decrease font size for smaller screens */
   }
-  
+
   .About p {
-    font-size: 1.1rem;
-    color: #000000;
-    margin-top: 10px;
-    
-    font-weight: 500;
-    text-shadow: -1px -1px 0 #ebe8e8,  
-                  1px -1px 0 #ebe8e8,
-                  -1px 1px 0 #ebe8e8,
-                  1px 1px 0 #ebe8e8;
+    font-size: 1rem; /* Decrease font size for smaller screens */
   }
-  
-  
+}

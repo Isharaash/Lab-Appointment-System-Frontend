@@ -1,7 +1,7 @@
 import React from 'react';
-import NavigationBar from './NavigationBar'; // Assuming you have a NavigationBar component
-import Footer from './Footer'; // Assuming you have a Footer component
-import Card from './Card'; // Assuming you have a Card component
+import NavigationBar from './NavigationBar';
+import Footer from './Footer';
+import Card from './Card';
 import './ContactPage.css'; // Import CSS for ContactPage component
 
 const ContactPage = () => {
@@ -34,4 +34,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-

@@ -1,24 +1,35 @@
+/* UserProfile.css */
 .user-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 50px;
-    width: 300px;
-    height: 220px;
-    margin-left: 190px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 40px;
+}
 
+.user-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.user-card p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .user-card {
+    max-width: 90%; /* Adjust max-width for smaller screens */
   }
-  
+
   .user-card h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    margin-top: -20px;
+    font-size: 1.5rem; /* Decrease font size for smaller screens */
+  }
 
-  }
-  
   .user-card p {
-    color: #666;
-    margin: 1px;
-    text-align: left;
+    font-size: 1rem; /* Decrease font size for smaller screens */
   }
-  
+}

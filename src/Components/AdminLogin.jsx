@@ -5,6 +5,7 @@ import './AdminLogin.css'; // Import CSS file for styling
 import NavigationBar from './NavigationBar';
 import Footer from './Footer';
 
+
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -55,8 +56,9 @@ const AdminLogin = () => {
         <button type="submit">Login</button>
       </form>
     </div>
-    <Footer/>
+
     </div>
+    
   );
 };
 

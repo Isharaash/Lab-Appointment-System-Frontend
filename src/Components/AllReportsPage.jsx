@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AdminNav from './AdminNav';
 
 const AllReportsPage = () => {
   const [reports, setReports] = useState([]);
@@ -37,6 +38,7 @@ const AllReportsPage = () => {
 
   return (
     <div>
+       <AdminNav/>
       <h2>All Reports</h2>
       <table>
         <thead>
@@ -64,6 +66,7 @@ const AllReportsPage = () => {
           ))}
         </tbody>
       </table>
+      <footer/>
     </div>
   );
 };

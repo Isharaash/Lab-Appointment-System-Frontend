@@ -1,51 +1,67 @@
-/* UserLogin component styles */
+/* Userrgister.css */
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 100px;
+  margin-bottom: 230px;
+}
+
 .login h2 {
-    color: #333;
-    text-align: center;
-    margin-top: 30px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.login label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #0056b3;
+}
+
+.register-link {
+  color: #007bff;
+}
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .login {
+    max-width: 90%; /* Adjust max-width for smaller screens */
   }
-  
-  .login form {
-    max-width: 400px;
-    margin: 20px auto;
-    
+
+  .login h2 {
+    font-size: 1.5rem; /* Decrease font size for smaller screens */
   }
-  
-  .login div {
-    margin-bottom: 15px;
+
+  .login input[type="email"],
+  .login input[type="password"] {
+    font-size: 14px; /* Decrease font size for input fields on smaller screens */
   }
-  
-  .login label {
-    display: block;
-    margin-bottom: 5px;
-    color: #666;
-  }
-  
-  .login input[type='email'],
-   input[type='password'] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-  }
-  
+
   .login button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    font-size: 16px; /* Increase font size for button on smaller screens */
   }
-  
-  .login button:hover {
-    background-color: #0056b3;
-  }
-  .register-link {
-    color: #007bff; /* Set the link color */
-    text-decoration: none; /* Remove the underline */
-  }
-  
-  .register-link:hover {
-    text-decoration: underline; /* Add underline on hover */
-  }
-  
+}

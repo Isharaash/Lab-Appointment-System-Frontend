@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import './ReportContentPage.css'; // Import the CSS file
+import AdminNav from './AdminNav';
 
 const ReportContentPage = () => {
   const { appointmentId } = useParams();
+  const navigate = useNavigate();
   const [reportContent, setReportContent] = useState('');
-  const [submitted, setSubmitted] = useState(false); // State to track submission
+  const [submitted, setSubmitted] = useState(false);
 
   const handleReportContentChange = (event) => {
     setReportContent(event.target.value);
@@ -12,7 +15,7 @@ const ReportContentPage = () => {
 
   const handleSubmit = async () => {
     try {
-      if (submitted) return; // Prevent multiple submissions
+      if (submitted) return;
       const response = await fetch(`http://localhost:8080/api/admin/reports/${appointmentId}`, {
         method: 'POST',
         headers: {
@@ -23,7 +26,8 @@ const ReportContentPage = () => {
       if (!response.ok) {
         throw new Error('Failed to submit report content');
       }
-      setSubmitted(true); // Set submitted to true upon successful submission
+      setSubmitted(true);
+      navigate('/allreportcode');
     } catch (error) {
       console.error(error);
     }
@@ -31,15 +35,21 @@ const ReportContentPage = () => {
 
   return (
     <div>
-      <h2>Report Content for Appointment ID: {appointmentId}</h2>
+ <AdminNav/>
+      <h2 className="report-content-heading">Report Content for Appointment ID: {appointmentId}</h2>
       {!submitted ? (
-        <textarea value={reportContent} onChange={handleReportContentChange} />
-      ) : null} {/* Conditionally render textarea based on submission state */}
-      {!submitted ? ( // Conditionally render submit button based on submission state
-        <button onClick={handleSubmit}>Submit Report</button>
+        <textarea
+          className="report-content-textarea"
+          value={reportContent}
+          onChange={handleReportContentChange}
+        />
+      ) : null}
+      {!submitted ? (
+        <button className="submit-button" onClick={handleSubmit}>Submit Report</button>
       ) : (
         <p>Report submitted successfully!</p>
       )}
+      <footer/>
     </div>
   );
 };

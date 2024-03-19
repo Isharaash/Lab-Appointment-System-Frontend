@@ -1,3 +1,5 @@
+// AdminPage.js
+
 import React, { useState, useEffect } from 'react';
 import AdminProfile from './AdminProfile';
 import AdminNav from './AdminNav';
@@ -23,7 +25,7 @@ const AdminPage = () => {
   return (
     <div>
       <AdminLogout/>
-    <h3 className="welcompage" > Welcome, {adminData && adminData.fname} {adminData && adminData.lname}</h3> 
+      <h3 className="welcompage">Welcome, {adminData && adminData.fname} {adminData && adminData.lname}</h3> 
       <AdminNav location={{ state: { adminData } }} />
       {adminData && <AdminProfile location={{ state: { adminData } }} />}
       <Footer/>
