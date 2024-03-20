@@ -24,6 +24,8 @@ import ContactPage from './Components/ContactPage';
 import UserLogin from './Components/UserLogin';
 import ReportContentPage from './Components/ReportContentPage';
 import AllReportsPage from './Components/AllReportsPage';
+import TecReportContentPage from './Components/TecReportContentPage';
+import TecallReportsPage from './Components/TecallReportsPage';
 
 
 
@@ -53,7 +55,8 @@ function App() {
           <Route path="/techniciansappointment" element={<TechnicianAppointment/>}></Route>
           <Route path="/generate-report/:appointmentId" element={<ReportContentPage/>}></Route>
           <Route path="/allreportcode" element={<AllReportsPage/>}></Route>
-       
+          <Route path="/tecReportContentPage/:appointmentId" element={<TecReportContentPage/>}></Route>
+          <Route path="/tecallReportsPage" element={<TecallReportsPage/>}></Route>
          
         </Routes>
       </BrowserRouter>

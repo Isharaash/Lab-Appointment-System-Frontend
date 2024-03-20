@@ -7,6 +7,7 @@ import First from "../Image/1.png";
 import Second from "../Image/2.jpg";
 import Third from "../Image/3.jpeg";
 
+
 const HomePage = () => {
   return (
     <div>

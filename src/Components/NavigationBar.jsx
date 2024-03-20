@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavigationBar.css';
+import logo from '../Image/logo.png'; // Import your logo file
 
 const NavigationBar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -11,6 +12,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="mnnavbar">
+ <img src={logo} alt="Logo" className="logo" /> {/* Include your logo */}
       <button className={`menu-btn ${isActive ? 'open' : ''}`} onClick={toggleMenu}>
         <span></span>
         <span></span>

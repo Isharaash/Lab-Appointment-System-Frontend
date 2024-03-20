@@ -78,7 +78,7 @@ const ViewUserAppointments = ({ user }) => {
               <td>{appointment.test}</td>
               <td>{appointment.des}</td>
               <td>
-                <button onClick={() => deleteAppointment(appointment.id)}>Delete</button>
+                <button onClick={() => deleteAppointment(appointment.id)}>Cancel</button>
                 <button className="download-button" onClick={() => downloadAppointmentReport(appointment.id)}>Download Report</button>
 
               </td>

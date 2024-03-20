@@ -1,10 +1,23 @@
 .mnnavbar {
   background-color: #333;
   overflow: hidden;
+  padding: 10px; /* Add padding to create space around the logo and menu button */
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.logo {
+  width: 150px; /* Set width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add some space between the logo and menu button */
 }
 
 .menu-btn {
   display: none; /* Hide menu button by default for larger screens */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .mnnav-links {
@@ -29,15 +42,11 @@
 .mnnav-links li a:hover {
   background-color: #696969;
 }
+
 /* Media query for mobile devices */
 @media screen and (max-width: 600px) {
   .menu-btn {
     display: block; /* Display menu button for smaller screens */
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    margin-top: 10px;
   }
 
   /* Styling for hamburger icon */

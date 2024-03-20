@@ -15,7 +15,7 @@ function UserNav() {
   return (
     <nav className="usernavbar">
       <div className="container">
-        <Link to="/" className="logo">  <h2>Welcome, {user.fname} {user.lname}</h2></Link>
+        <Link className="logo2">  <h2>Welcome, {user.fname} {user.lname}</h2></Link>
         <ul className="nav-links">
       
         

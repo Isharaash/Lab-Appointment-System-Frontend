@@ -80,7 +80,7 @@ const ViewAdminAppointment = () => {
               <td>{appointment.appointmentTime}</td>
               <td>
                 
-              <button onClick={() => handleDeleteAppointment(appointment.id)}>Delete</button>
+              <button onClick={() => handleDeleteAppointment(appointment.id)}>Cancel</button>
               <button onClick={() => handleGenerateReport(appointment.id)}>Generate Report</button>
               </td>
             </tr>

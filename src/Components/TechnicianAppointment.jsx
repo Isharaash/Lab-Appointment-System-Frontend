@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './ViewAdminAppointment.css';
 
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 import TechicianNav from './TechicianNav';
 
-const TechnicianAppointment = () => {
+const ViewAdminAppointment = () => {
   const [appointments, setAppointments] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/admin/appointments');
+        const response = await fetch('http://localhost:8080/api/admin/allappointments');
         if (!response.ok) {
           throw new Error('Failed to fetch appointments');
         }
@@ -38,10 +40,13 @@ const TechnicianAppointment = () => {
       console.error(error);
     }
   };
-
+  const handleGenerateReport = (appointmentId) => {
+    // Navigate to the report content page with the appointment ID as a URL parameter
+    navigate(`/tecReportContentPage/${appointmentId}`);
+  };
   return (
     <div>
-    <TechicianNav/>
+      <TechicianNav/>
       <h2>Appointments</h2>
       <table>
         <thead>
@@ -75,7 +80,9 @@ const TechnicianAppointment = () => {
               <td>{appointment.des}</td>
               <td>{appointment.appointmentTime}</td>
               <td>
-                <button onClick={() => handleDeleteAppointment(appointment.id)}>Delete</button>
+                
+              <button onClick={() => handleDeleteAppointment(appointment.id)}>Cancel</button>
+              <button onClick={() => handleGenerateReport(appointment.id)}>Generate Report</button>
               </td>
             </tr>
           ))}
@@ -86,4 +93,6 @@ const TechnicianAppointment = () => {
   );
 };
 
-export default TechnicianAppointment;
+export default ViewAdminAppointment;
+
+
